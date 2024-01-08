@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn {
+  color: white;
+  background-color: #333;
+  transition: background-color 0.3s;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.agenped {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  width: 82%;
+  margin: auto;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root{
+  --primary-color: #3794b0;
+}
+
+ul li.bulet{
+  color: black;
+  display: block;
+  position: relative;
+  width: 50%;
+}
+
+ul li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label{
+  display: block;
+  position: relative;
+  font-weight: 300;
+  font-size: medium;
+  padding: 20px;
+  margin: 0px 30px;
+  height: 50px;
+  z-index: 9;
+  cursor: pointer;
+}
+
+ul li .check{
+  position: absolute;
+  border: 2px solid #AAAAAA;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+  top: 22px;
+  left: 20px;
+	transition: border .10s linear;
+	-webkit-transition: border .10s linear;
+}
+
+input[type=radio]:checked ~ .check {
+  border: 5px solid var(--primary-color)
+}
+
+input[type=radio]:checked ~ .check::before{
+  background: var(--primary-color)
+}
+
+input[type=radio]:checked ~ .text-primary{
+  color: var(--primary-color)
+} 
+
+/* To get selected option we are using this checked class */
+.checked {
+  border: 5px solid var(--primary-color) !important;
+}
+
+.checked::before{
+  background: var(--primary-color)
+}
